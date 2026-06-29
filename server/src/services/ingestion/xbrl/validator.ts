@@ -17,8 +17,20 @@ export class XbrlValidator {
    * Validates the MIME type / Content-Type of the downloaded resource.
    */
   static isValidMimeType(contentType: string | undefined): boolean {
-    if (!contentType) return false;
+    if (!contentType) return true;
     const lower = contentType.toLowerCase();
-    return lower.includes('xml') || lower.includes('xbrl') || lower.includes('html') || lower.includes('text/plain');
+    return (
+      lower.includes('xml') ||
+      lower.includes('xbrl') ||
+      lower.includes('html') ||
+      lower.includes('text/plain') ||
+      lower.includes('octet-stream')
+    );
+  }
+
+  /** Heuristic check that payload is XBRL/XML. */
+  static looksLikeXbrl(text: string): boolean {
+    const sample = text.slice(0, 5000).toLowerCase();
+    return sample.includes('<xbrli:xbrl') || (sample.includes('<?xml') && sample.includes('contextref'));
   }
 }

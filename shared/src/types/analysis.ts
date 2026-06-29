@@ -1,7 +1,7 @@
 // ─── Analysis Types ─────────────────────────────────────────────────────────
-import type { BrsrReport } from './report';
-import type { ScoringResult } from './scoring';
-import type { Recommendation } from './recommendation';
+import type { BrsrReport } from './report.js';
+import type { ScoringResult } from './scoring.js';
+import type { Recommendation } from './recommendation.js';
 
 export type AnalysisStatus = 'UPLOADING' | 'EXTRACTING' | 'SCORING' | 'COMPLETED' | 'FAILED';
 

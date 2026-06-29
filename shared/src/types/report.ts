@@ -1,5 +1,5 @@
 // ─── BRSR Report Types ──────────────────────────────────────────────────────
-import type { PrincipleId } from '../constants/principles';
+import type { PrincipleId } from '../constants/principles.js';
 
 export interface BrsrReport {
   metadata: ReportMetadata;

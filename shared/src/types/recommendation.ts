@@ -1,5 +1,5 @@
 // ─── Recommendation Types ───────────────────────────────────────────────────
-import type { PrincipleId } from '../constants/principles';
+import type { PrincipleId } from '../constants/principles.js';
 
 export type RecommendationPriority = 'critical' | 'high' | 'medium' | 'low';
 export type RecommendationCategory = 'disclosure' | 'policy' | 'implementation' | 'measurement' | 'governance';

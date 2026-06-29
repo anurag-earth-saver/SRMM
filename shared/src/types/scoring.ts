@@ -1,6 +1,6 @@
 // ─── Scoring Types ──────────────────────────────────────────────────────────
-import type { PrincipleId } from '../constants/principles';
-import { MaturityLevel } from '../constants/maturityLevels';
+import type { PrincipleId } from '../constants/principles.js';
+import { MaturityLevel } from '../constants/maturityLevels.js';
 
 export { MaturityLevel };
 

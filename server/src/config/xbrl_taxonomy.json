@@ -1,0 +1,110 @@
+{
+  "primaryContext": ["DCYMain", "ICYMain"],
+  "financialYearContexts": ["DCYMain"],
+  "sectionA": {
+    "entityDetails": {
+      "companyName": ["NameOfTheCompany", "NameOfTheListedEntity"],
+      "cin": ["CorporateIdentityNumber"],
+      "registeredAddress": ["AddressOfRegisteredOfficeOfCompany"],
+      "email": ["EMailOfTheCompany"],
+      "website": ["WebsiteOfCompany"],
+      "yearOfIncorporation": ["DateOfIncorporation"]
+    },
+    "operations": {
+      "mainBusinessActivity": ["DescriptionOfMainActivity", "DescriptionOfBusinessActivity"],
+      "numberOfLocations": ["NumberOfLocations"],
+      "marketsServed": ["NumberOfStatesWhereMarketServedByTheEntity", "NumberOfCountriesWhereMarketServedByTheEntity"]
+    },
+    "workforce": {
+      "totalEmployees": ["NumberOfEmployeesOrWorkersIncludingDifferentlyAbled"],
+      "totalWorkers": ["NumberOfEmployeesOrWorkersIncludingDifferentlyAbled"],
+      "womenEmployeesPercentage": ["PercentageOfEmployeesOrWorkersIncludingDifferentlyAbled", "PercentageOfGrossWagesPaidToFemaleToTotalWagesPaid"],
+      "differentlyAbledPercentage": ["PercentageOfDifferentlyAbledEmployeesOrWorkers"],
+      "turnoverRate": ["TurnoverRate"]
+    },
+    "workforceContexts": {
+      "totalEmployees": "D_Gender_Employees_TableA",
+      "totalWorkers": "D_Gender_Workers_TableA",
+      "womenEmployeesPercentage": "D_Female_Employees_TableA",
+      "differentlyAbledPercentage": "D_Gender_Employees_TableB",
+      "turnoverRate": "D_Gender_PermanentEmployees_TableB_TurnOverRate_CY"
+    },
+    "governance": {
+      "boardSize": ["TotalNumberOfBoardOfDirectors"],
+      "womenDirectorsPercentage": ["PercentageOfFemaleBoardOfDirectors"],
+      "independentDirectorsPercentage": ["PercentageOfIndependentDirectorsOnTheBoard"],
+      "csrCommittee": ["WhetherCSRIsApplicableAsPerSection135OfCompaniesAct2013"],
+      "sustainabilityCommittee": ["DoesTheEntityHaveASpecifiedCommitteeOfTheBoardOrDirectorResponsibleForDecisionMakingOnSustainabilityRelatedIssues"]
+    },
+    "governanceContexts": ["DCYMain", "ICYMain"]
+  },
+  "sectionB": {
+    "principleContextPrefix": "D_Principle",
+    "hasPolicy": ["WhetherYourEntitysPolicyOrPoliciesCoverEachPrincipleAndItsCoreElementsOfTheNGRBCs"],
+    "boardApproval": ["HasThePolicyBeenApprovedByTheBoard"],
+    "publicAvailability": ["WebLinkOfThePoliciesExplanatoryTextBlock", "WebLinkAtAntiCorruptionOrAntiBriberyPolicyIsPlace"],
+    "grievanceMechanism": [
+      "GrievanceRedressalMechanismInPlace",
+      "WebLinkForGrievanceRedressPolicy",
+      "IsThereAMechanismAvailableToReceiveAndRedressGrievancesForPermanentEmployees",
+      "IsThereAMechanismAvailableToReceiveAndRedressGrievancesForPermanentWorkers",
+      "DetailsOfMechanismAvailableToReceiveAndRedressGrievancesForPermanentEmployeesExplanatoryTextBlock"
+    ]
+  },
+  "sectionC": {
+    "P1-E1": ["TotalNumberOfTrainingAndAwarenessProgramsHeld", "TopicsOrPrinciplesCoveredUnderTheTrainingAndItsImpact"],
+    "P1-E2": ["NumberOfComplaintsFiledDuringTheYear", "NumberOfComplaintsPendingResolutionAtTheEndOfYear", "TotalComplaintsReportedUnderSexualHarassmentOfWomenAtWorkplace"],
+    "P1-E3": ["DoesTheEntityHaveAnAntiCorruptionOrAntiBriberyPolicy", "AntiCorruptionOrAntiBriberyPolicyExplanatoryTextBlock"],
+    "P1-E4": ["NumberOfComplaintsReceivedInRelationToIssuesOfConflictOfInterestOfTheDirectors", "NumberOfComplaintsReceivedInRelationToIssuesOfConflictOfInterestOfTheKMPs"],
+    "P1-L1": ["DoTheEnlistedPoliciesExtendToYourValueChainPartners", "PercentageOfValueChainPartnersCoveredUnderTheAwarenessProgrammes"],
+
+    "P2-E1": ["PercentageOfInputsWereSourcedSustainably", "PercentageOfSustainableSourcing"],
+    "P2-E2": ["PercentageOfRecycledOrReusedInputMaterialUsedToTotalMaterial", "PercentageOfRecycledOrReusedInputMaterial"],
+    "P2-E3": ["DescribeTheProcessesInPlaceToSafelyReclaimYourProductsForReusingRecyclingAndDisposingAtTheEndOfLifeForPlasticsIncludingPackagingExplanatoryTextBlock", "DescribeTheProcessesInPlaceToSafelyReclaimYourProductsForReusingRecyclingAndDisposingAtTheEndOfLifeForEWasteExplanatoryTextBlock"],
+    "P2-E4": ["WhetherExtendedProducerResponsibilityIsApplicableToTheEntitySActivities", "WhetherExtendedProducerResponsibilityIsApplicableToTheEntity"],
+    "P2-L1": ["WhetherLifeCycleAssessmentOrPerspectiveWasConductedForAnyOfTheProductsOrForItsServices", "LifeCycleAssessmentOrPerspectiveWasConductedForAnyOfTheProductsOrForItsServices"],
+    "P2-L2": ["PercentageOfRecycledOrReusedInputMaterialUsedToTotalMaterial"],
+
+    "P3-E1": ["AmountOfCostIncurredOnWellBeingMeasures", "DoTheEmployeesOrWorkerOfTheEntityHaveAccessToNonOccupationalMedicalAndHealthcareServices"],
+    "P3-E2": ["PercentageOfEmployeesCoveredByPF", "PercentageOfEmployeesCoveredByHealthInsurance", "AccidentInsuranceMember"],
+    "P3-E3": ["DoesTheEntityHaveAnEqualOpportunityPolicyAsPerTheRightsOfPersonsWithDisabilitiesAct2016", "WebLinkOfEqualOppertunityPolicyTextBlock"],
+    "P3-E4": ["IsThereAMechanismAvailableToReceiveAndRedressGrievancesForPermanentEmployees", "DetailsOfMechanismAvailableToReceiveAndRedressGrievancesForPermanentEmployeesExplanatoryTextBlock"],
+    "P3-E5": ["ReturnToWorkRatePermanentEmployeesThatTookParentalLeave", "RetentionRatesPermanentEmployeesThatTookParentalLeave"],
+    "P3-L1": ["WhetherThereAreTransitionAssistanceProgramsToFacilitateContinuedEmployabilityAndTheManagementOfCareerEndings"],
+
+    "P4-E1": ["DescribeTheProcessesForIdentifyingKeyStakeholderGroupsOfTheEntityExplanatoryTextBlock", "NumberOfStakeholderGroupsEngagedByTheEntity"],
+    "P4-E2": ["WhetherStakeholderConsultationIsUsedToSupportTheIdentificationAndManagementOfEnvironmentalAndSocialTopics", "PurposeAndScopeOfEngagementIncludingKeyTopicsAndConcernsRaisedDuringSuchEngagement"],
+    "P4-L1": ["WhetherSocialImpactAssessmentsAreConducted", "DetailsOfSocialImpactAssessmentsConductedByTheEntityExplanatoryTextBlock"],
+
+    "P5-E1": ["TotalNumberOfEmployeesOrWorkersForTrainingOnHumanRightsIssues", "PercentageOfEmployeesOrWorkersCoveredForProvidedTrainingOnHumanRightsIssues"],
+    "P5-E2": ["WhetherWagesArePaidHigherThanMinimumWage", "PercentageOfEmployeesOrWorkersPaidMoreThanMinimumWage"],
+    "P5-E3": ["TotalComplaintsReportedUnderSexualHarassmentOfWomenAtWorkplace", "ComplaintsOnPOSHUpHeld"],
+    "P5-E4": ["PercentageOfChildLabourOfYourPlantsAndOfficesThatWereAssessedP5", "PercentageOfForcedLabourOrInvoluntaryLabourOfYourPlantsAndOfficesThatWereAssessedP5"],
+    "P5-L1": ["DescribeTheInternalMechanismsInPlaceToRedressGrievancesRelatedToHumanRightsIssuesExplanatoryTextBlock", "WhetherHumanRightsDueDiligenceIsConducted"],
+
+    "P6-E1": ["TotalEnergyConsumedFromRenewableAndNonRenewableSources", "EnergyIntensityPerRupeeOfTurnover", "WhetherDetailsOfTotalEnergyConsumptionAndEnergyIntensityApplicableToTheCompany"],
+    "P6-E2": ["WhetherTheEntityHasBeenCoveredUnderThePerformAchieveAndTradeSchemeOfTheGovernmentOfIndia", "WhetherTheEntityHasBeenCoveredUnderThePerformAchieveAndTradeScheme"],
+    "P6-E3": ["TotalWaterWithdrawalInKilolitres", "TotalWaterDischargedInKilolitres", "TotalWaterConsumptionInKilolitres"],
+    "P6-E4": ["TotalScope1Emissions", "TotalScope2Emissions", "TotalScope1AndScope2EmissionsIntensityPerRupeeOfTurnover"],
+    "P6-E5": ["TotalWasteGenerated", "TotalWasteRecovered", "TotalWasteDisposed"],
+    "P6-E6": ["WhetherEnvironmentalApprovalsOrClearancesWereRequiredForTheOperationsOfTheEntity", "ComplianceWithStatutoryRequirementsOfRelevanceToThePrinciplesAndRectificationOfAnyNonCompliancesIndicateWhetherReviewWasUndertakenBy"],
+    "P6-L1": ["WhetherTotalScope3EmissionsAndItsIntensityIsApplicableToTheCompany", "TotalScope3Emissions"],
+    "P6-L2": ["WhetherBiodiversityImpactAssessmentWasConducted", "DetailsOfBiodiversityImpactAssessmentConductedExplanatoryTextBlock"],
+    "P6-L3": ["WhetherTheEntityHasZeroLiquidDischargePolicy", "WhetherTheEntityHasZeroLiquidDischarge"],
+
+    "P7-E1": ["NameOfTheTradeAndIndustryChambersOrAssociations", "NumberOfTradeAndIndustryChambersOrAssociations"],
+    "P7-E2": ["DetailsOfPublicPolicyPositionsAdvocatedByTheEntityExplanatoryTextBlock", "WhetherTheEntityHasAdvocatedAnyPublicPolicyPositions"],
+    "P7-L1": ["DetailsOfAnyCorrectiveActionsTakenOrUnderwayOnIssuesRelatedToAdvertisingAndDeliveryOfEssentialServicesOrCyberSecurityAndDataPrivacyOrRecallsOrPenaltyOrActionTakenByRegulatoryAuthoritiesOnSafetyOfProductsOrServicesExplanatoryTextBlock"],
+
+    "P8-E1": ["WhetherCSRIsApplicableAsPerSection135OfCompaniesAct2013", "Turnover", "AmountSpentOnCSRProjects"],
+    "P8-E2": ["PercentageOfInputMaterialSourcedFromMSMEsOrSmallProducers", "PercentageOfInputMaterialSourcedFromWithinIndia"],
+    "P8-E3": ["WhetherSocialImpactAssessmentsAreConducted", "DetailsOfSocialImpactAssessmentsConductedByTheEntityExplanatoryTextBlock"],
+    "P8-L1": ["WhetherTheEntityHasPreferentialProcurementPolicyForMarginalizedOrVulnerableGroups"],
+
+    "P9-E1": ["DescribeTheMechanismsInPlaceToReceiveAndRespondToConsumerComplaintsAndFeedbackExplanatoryTextBlock", "ConsumerComplaintsReceivedDuringTheYear"],
+    "P9-E2": ["DetailsOfAnyCorrectiveActionsTakenOrUnderwayOnIssuesRelatedToAdvertisingAndDeliveryOfEssentialServicesOrCyberSecurityAndDataPrivacyOrRecallsOrPenaltyOrActionTakenByRegulatoryAuthoritiesOnSafetyOfProductsOrServicesExplanatoryTextBlock"],
+    "P9-E3": ["DoesTheEntityHaveAFrameworkOrPolicyOnCyberSecurityAndRisksRelatedToDataPrivacy", "WebLinkOfThePolicyOnCyberSecurityAndRisksRelatedToDataPrivacy"],
+    "P9-E4": ["WhetherTheEntityHasProcessesInPlaceToProvideInformationToCustomersAndConsumersForResponsibleConsumptionOfProductsOrServices"],
+    "P9-L1": ["NumberOfDataBreaches", "DetailsOfDataBreachesExplanatoryTextBlock"]
+  }
+}

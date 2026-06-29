@@ -40,6 +40,24 @@ graph TD
 3. **Start Server**: `npm run start --workspace=@brsr-srmm/server`
 4. **Start Client**: `npm run dev --workspace=@brsr-srmm/client`
 
+## XBRL Ingestion
+
+POST `/api/ingest/xbrl` with `{ "url": "https://nsearchives.nseindia.com/corporate/xbrl/..." }`.
+
+The server downloads the SEBI `in-capmkt` XBRL instance, parses ~1400+ facts, maps them via `xbrl_taxonomy.json`, and scores the resulting BRSR report.
+
+## Deploy to Vercel
+
+1. Push this repo to GitHub and import it in [Vercel](https://vercel.com).
+2. Set environment variables (optional):
+   - `CORS_ORIGIN=*` (default on Vercel)
+   - `MAX_FILE_SIZE_MB=50`
+3. Deploy — Vercel runs the monorepo build and serves:
+   - **Frontend** from `client/dist`
+   - **API** via `api/index.ts` (Express serverless, 60s timeout)
+
+> **Note:** Analysis results are stored in memory. On Vercel serverless, state does not persist across function instances. For production use, connect a database (see `.env.example`).
+
 ## Docker Compose
 
 To deploy the entire stack (Backend + Frontend with Nginx):
