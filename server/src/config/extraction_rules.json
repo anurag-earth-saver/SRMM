@@ -1,0 +1,204 @@
+{
+  "sectionPatterns": {
+    "sectionA": [
+      "section\\s*a[\\s:–\\-]*general\\s*disclosures",
+      "general\\s*disclosures"
+    ],
+    "sectionB": [
+      "section\\s*b[\\s:–\\-]*management\\s*and\\s*process\\s*disclosures",
+      "management\\s*and\\s*process\\s*disclosures"
+    ],
+    "sectionC": [
+      "section\\s*c[\\s:–\\-]*principle[-\\s]*wise\\s*performance",
+      "principle[-\\s]*wise\\s*performance\\s*disclosure"
+    ]
+  },
+  "sectionA": {
+    "entityDetails": {
+      "companyName": [
+        "corporate\\s*identity\\s*number[^:]*:\\s*(.+)",
+        "name\\s*of\\s*the\\s*(?:listed\\s*)?entity[^:]*:\\s*(.+)",
+        "company\\s*name[^:]*:\\s*(.+)"
+      ],
+      "cin": [
+        "(?:CIN|corporate\\s*identity\\s*number)[^:]*:\\s*([A-Z0-9]+)"
+      ],
+      "registeredAddress": [
+        "registered\\s*(?:office\\s*)?address[^:]*:\\s*(.+)"
+      ],
+      "email": [
+        "(?:e-?mail|email\\s*id)[^:]*:\\s*([^\\s,]+@[^\\s,]+)"
+      ],
+      "website": [
+        "website[^:]*:\\s*((?:https?:\\/\\/)?[^\\s,]+\\.[^\\s,]+)"
+      ],
+      "yearOfIncorporation": [
+        "year\\s*of\\s*incorporation[^:]*:\\s*(\\d{4})"
+      ]
+    },
+    "operations": {
+      "mainBusinessActivity": [
+        "main\\s*business\\s*activity[^:]*:\\s*(.+)",
+        "(?:NIC|industry)\\s*code[^:]*:\\s*(.+)"
+      ],
+      "numberOfLocations": {
+        "plants": ["(?:number\\s*of\\s*)?plants[^:]*:\\s*([\\d,]+)"],
+        "offices": ["(?:number\\s*of\\s*)?offices[^:]*:\\s*([\\d,]+)"]
+      }
+    },
+    "workforce": {
+      "totalEmployees": [
+        "total\\s*(?:no\\.?\\s*of\\s*)?employees[^:]*:\\s*([\\d,]+)",
+        "total\\s*employees[^:]*:\\s*([\\d,]+)"
+      ],
+      "totalWorkers": [
+        "total\\s*(?:no\\.?\\s*of\\s*)?workers[^:]*:\\s*([\\d,]+)"
+      ],
+      "womenEmployeesPercentage": [
+        "women\\s*employees[^:]*:\\s*([\\d.]+)\\s*%"
+      ],
+      "differentlyAbledPercentage": [
+        "differently\\s*abled[^:]*:\\s*([\\d.]+)\\s*%"
+      ],
+      "turnoverRate": [
+        "turnover\\s*rate[^:]*:\\s*([\\d.]+)\\s*%"
+      ]
+    },
+    "governance": {
+      "boardSize": [
+        "(?:number|no\\.?)\\s*of\\s*(?:board\\s*)?directors[^:]*:\\s*([\\d,]+)",
+        "board\\s*(?:of\\s*directors)?\\s*(?:size|strength)[^:]*:\\s*([\\d,]+)"
+      ],
+      "womenDirectorsPercentage": [
+        "women\\s*directors?[^:]*:\\s*([\\d.]+)\\s*%"
+      ],
+      "independentDirectorsPercentage": [
+        "independent\\s*directors?[^:]*:\\s*([\\d.]+)\\s*%"
+      ],
+      "csrCommittee": ["csr\\s*committee"],
+      "sustainabilityCommittee": ["sustainability\\s*committee"]
+    }
+  },
+  "sectionB": {
+    "positivePatterns": [
+      "\\byes\\b",
+      "policy\\s*(?:has\\s*been\\s*)?(?:formulated|framed|adopted|approved|available|in\\s*place)",
+      "has\\s*(?:a\\s*)?policy"
+    ],
+    "negativePatterns": [
+      "\\bno\\s*(?:policy|specific\\s*policy)\\b",
+      "policy\\s*(?:has\\s*)?not\\s*(?:been\\s*)?(?:formulated|framed|adopted)"
+    ],
+    "boardApprovalPatterns": [
+      "(?:approved|endorsed)\\s*(?:by\\s*)?(?:the\\s*)?board"
+    ],
+    "publicAvailabilityPatterns": [
+      "(?:publicly\\s*available|available\\s*on\\s*(?:the\\s*)?website|web\\s*link)"
+    ],
+    "grievanceMechanismPatterns": [
+      "grievance\\s*(?:redress(?:al)?|mechanism|channel)"
+    ]
+  },
+  "sectionC": {
+    "P1": {
+      "essential": [
+        { "id": "P1-E1", "question": "Training on ethics/values/principles", "patterns": ["training.*(?:ethics|values|principle)"] },
+        { "id": "P1-E2", "question": "Complaints on ethics/bribery/corruption", "patterns": ["complaint.*(?:ethics|brib|corrupt)"] },
+        { "id": "P1-E3", "question": "Anti-corruption/anti-bribery policy", "patterns": ["anti[\\s-]*(?:corrupt|brib)"] },
+        { "id": "P1-E4", "question": "Conflict of interest disclosures", "patterns": ["conflict.*interest"] }
+      ],
+      "leadership": [
+        { "id": "P1-L1", "question": "Awareness programmes for value chain partners", "patterns": ["awareness.*value\\s*chain"] }
+      ]
+    },
+    "P2": {
+      "essential": [
+        { "id": "P2-E1", "question": "Sustainable sourcing percentage", "patterns": ["sustainable\\s*sourc", "percentage.*sustainab"] },
+        { "id": "P2-E2", "question": "Recycled/reused input materials", "patterns": ["recycl.*input|input.*recycl|reuse.*material"] },
+        { "id": "P2-E3", "question": "Product reclamation procedures", "patterns": ["reclaim|reclamat|product.*end.*life"] },
+        { "id": "P2-E4", "question": "EPR applicable and actions", "patterns": ["extended\\s*producer|EPR"] }
+      ],
+      "leadership": [
+        { "id": "P2-L1", "question": "Life cycle assessment", "patterns": ["life\\s*cycle\\s*assess", "LCA"] },
+        { "id": "P2-L2", "question": "Recycled percentage in products", "patterns": ["recycl.*product|product.*recycl"] }
+      ]
+    },
+    "P3": {
+      "essential": [
+        { "id": "P3-E1", "question": "Employee/worker well-being measures", "patterns": ["well[\\s-]*being|welfare\\s*measure"] },
+        { "id": "P3-E2", "question": "Health insurance/accident cover", "patterns": ["health\\s*insur|accident.*cover"] },
+        { "id": "P3-E3", "question": "Equal opportunity policy", "patterns": ["equal\\s*opportunit"] },
+        { "id": "P3-E4", "question": "Grievance redressal mechanism", "patterns": ["grievance.*redress"] },
+        { "id": "P3-E5", "question": "Return to work and retention rates", "patterns": ["return.*work|retention.*rate"] }
+      ],
+      "leadership": [
+        { "id": "P3-L1", "question": "Transition assistance programmes", "patterns": ["transition.*assist|retiree"] }
+      ]
+    },
+    "P4": {
+      "essential": [
+        { "id": "P4-E1", "question": "Stakeholder identification and engagement", "patterns": ["stakeholder.*identif|stakeholder.*engag"] },
+        { "id": "P4-E2", "question": "Vulnerable/marginalized stakeholders", "patterns": ["vulnerab|marginali"] }
+      ],
+      "leadership": [
+        { "id": "P4-L1", "question": "Social impact assessments", "patterns": ["social\\s*impact.*assess", "SIA"] }
+      ]
+    },
+    "P5": {
+      "essential": [
+        { "id": "P5-E1", "question": "Human rights training", "patterns": ["human\\s*rights.*train"] },
+        { "id": "P5-E2", "question": "Minimum wages paid", "patterns": ["minimum.*wage"] },
+        { "id": "P5-E3", "question": "Sexual harassment complaints", "patterns": ["sexual.*harass", "POSH"] },
+        { "id": "P5-E4", "question": "Child/forced/involuntary labour", "patterns": ["child.*labour|forced.*labour|involuntary.*labour"] }
+      ],
+      "leadership": [
+        { "id": "P5-L1", "question": "Human rights due diligence", "patterns": ["human\\s*rights.*due\\s*diligence"] }
+      ]
+    },
+    "P6": {
+      "essential": [
+        { "id": "P6-E1", "question": "Energy consumption and intensity", "patterns": ["energy.*consump|energy.*intensit"] },
+        { "id": "P6-E2", "question": "PAT scheme compliance", "patterns": ["PAT|perform.*achiev.*trade"] },
+        { "id": "P6-E3", "question": "Water withdrawal and discharge", "patterns": ["water.*withdraw|water.*discharg"] },
+        { "id": "P6-E4", "question": "GHG emissions (Scope 1, 2)", "patterns": ["(?:GHG|greenhouse).*emiss|scope\\s*[12]"] },
+        { "id": "P6-E5", "question": "Waste management", "patterns": ["waste.*manage|waste.*generat"] },
+        { "id": "P6-E6", "question": "Environmental compliance", "patterns": ["environment.*complian|environment.*clearanc"] }
+      ],
+      "leadership": [
+        { "id": "P6-L1", "question": "Scope 3 emissions", "patterns": ["scope\\s*3"] },
+        { "id": "P6-L2", "question": "Biodiversity impact assessment", "patterns": ["biodiversit"] },
+        { "id": "P6-L3", "question": "Zero liquid discharge", "patterns": ["zero\\s*liquid\\s*discharge|ZLD"] }
+      ]
+    },
+    "P7": {
+      "essential": [
+        { "id": "P7-E1", "question": "Trade association memberships", "patterns": ["trade.*associat|industry.*associat|membership"] },
+        { "id": "P7-E2", "question": "Public policy advocacy positions", "patterns": ["public\\s*policy|advocacy|lobbying"] }
+      ],
+      "leadership": [
+        { "id": "P7-L1", "question": "Corrective action on advocacy", "patterns": ["corrective.*action.*advoca"] }
+      ]
+    },
+    "P8": {
+      "essential": [
+        { "id": "P8-E1", "question": "CSR projects and beneficiaries", "patterns": ["CSR.*project|CSR.*beneficiar"] },
+        { "id": "P8-E2", "question": "Input material sourced from MSMEs", "patterns": ["MSME|micro.*small.*medium|local\\s*sourc"] },
+        { "id": "P8-E3", "question": "Social impact assessments", "patterns": ["social\\s*impact"] }
+      ],
+      "leadership": [
+        { "id": "P8-L1", "question": "Preferential procurement from marginalized", "patterns": ["preferential.*procure|marginali.*procure"] }
+      ]
+    },
+    "P9": {
+      "essential": [
+        { "id": "P9-E1", "question": "Consumer complaint mechanisms", "patterns": ["consumer.*complaint|customer.*complaint"] },
+        { "id": "P9-E2", "question": "Product recalls and safety", "patterns": ["product.*recall|product.*safety"] },
+        { "id": "P9-E3", "question": "Cyber security/data privacy", "patterns": ["cyber.*secur|data.*privac"] },
+        { "id": "P9-E4", "question": "Information on products/services", "patterns": ["product.*inform|label.*disclos"] }
+      ],
+      "leadership": [
+        { "id": "P9-L1", "question": "Data breach incidents", "patterns": ["data.*breach|security.*incident"] }
+      ]
+    }
+  }
+}

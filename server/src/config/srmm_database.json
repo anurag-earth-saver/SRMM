@@ -1,0 +1,72 @@
+{
+  "maxScores": {
+    "sectionA": 25,
+    "sectionB": 50,
+    "sectionCEssential": 150,
+    "sectionCLeadership": 75,
+    "total": 300
+  },
+  "sectionAWeights": {
+    "entity": 8,
+    "operations": 4,
+    "workforce": 7,
+    "governance": 6
+  },
+  "sectionAFields": {
+    "entity": ["companyName", "cin", "registeredAddress", "email", "website", "yearOfIncorporation"],
+    "workforce": ["totalEmployees", "totalWorkers", "womenEmployeesPercentage", "differentlyAbledPercentage", "turnoverRate"]
+  },
+  "sectionBWeights": {
+    "hasPolicy": 0.4,
+    "boardApproval": 0.2,
+    "publicAvailability": 0.2,
+    "grievanceMechanism": 0.2
+  },
+  "sectionCWeights": {
+    "baseDisclosure": 0.6,
+    "hasData": 0.2,
+    "hasMultipleData": 0.1,
+    "hasDetailedResponse": 0.1
+  },
+  "recommendations": {
+    "sectionBMissingPolicy": {
+      "category": "policy",
+      "priority": "critical",
+      "impactScore": 8,
+      "titleTemplate": "Formulate {{shortName}} Policy ({{pid}})",
+      "descriptionTemplate": "No policy found for {{name}}. BRSR requires a board-approved policy for each NGRBC principle.",
+      "suggestedActionTemplate": "Draft and get board approval for a {{shortName}} policy. Publish on company website and link in BRSR report."
+    },
+    "sectionBNotApproved": {
+      "category": "governance",
+      "priority": "high",
+      "impactScore": 4,
+      "titleTemplate": "Get Board Approval for {{shortName}} Policy",
+      "descriptionTemplate": "Policy exists but lacks board approval. Board oversight demonstrates governance commitment.",
+      "suggestedActionTemplate": "Present the {{shortName}} policy to the board for formal approval. Document the resolution."
+    },
+    "sectionBNoGrievance": {
+      "category": "implementation",
+      "priority": "medium",
+      "impactScore": 3,
+      "titleTemplate": "Establish Grievance Mechanism for {{shortName}}",
+      "descriptionTemplate": "No grievance redressal mechanism found for {{name}}.",
+      "suggestedActionTemplate": "Implement a formal grievance channel and disclose the mechanism, escalation matrix, and resolution timelines."
+    },
+    "sectionCLowScore": {
+      "category": "disclosure",
+      "impactScoreBase": 10,
+      "titleTemplate": "Improve {{shortName}} Disclosures ({{percentage}}%)",
+      "descriptionTemplate": "{{name}} has a low disclosure rate. Many essential indicators are missing.",
+      "suggestedActionTemplate": "Systematically address each undisclosed indicator. Focus on essential indicators first for maximum score impact."
+    },
+    "sectionCMissingLeadership": {
+      "category": "measurement",
+      "priority": "medium",
+      "impactScore": 5,
+      "titleTemplate": "Address Leadership Indicators for {{shortName}}",
+      "descriptionTemplate": "No leadership indicators disclosed for {{name}}. These indicate advanced maturity.",
+      "suggestedActionTemplate": "Begin tracking and disclosing leadership-level metrics. These differentiate \"Established\" from \"Leading\" maturity."
+    }
+  }
+}
